@@ -1,0 +1,9 @@
+body{
+    background-color: #E5E5E5;;
+}
+.bloque{
+    display: flex;
+}
+#desencriptado{
+    background-color: #FFFFFF;
+}
