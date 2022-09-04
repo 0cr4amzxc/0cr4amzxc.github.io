@@ -10,15 +10,19 @@
 <body>
     <main class="bloque">
         <section>
-            <textarea placeholder="Ingrese texto aqui"></textarea>
+            <textarea class="entradaTexto" placeholder="Ingrese texto aqui"></textarea>
             <div>
-                <button>Encriptar</button>
-                <button>Desencriptar</button>
+                <button onclick="btnEncriptar()">Encriptar</button>
+                <button onclick="btnDescriptar()">Descriptar</button>
             </div>
         </section>
-        <section id="desencriptado">
-            <textarea></textarea>
+        <section>
+            <textarea class="salidaTexto"></textarea>
+            <div>
+                <button>copiar</button>
+            </div>
         </section>   
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
