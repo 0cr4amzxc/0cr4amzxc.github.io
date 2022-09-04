@@ -1,7 +1,14 @@
 const entradaT = document.querySelector(".entradaTexto");
 const salidaT = document.querySelector(".salidaTexto");
 const matrizCon = [["e","enter"], ["i", "imes"],["a","ai"],["o","ober"],["u","ufat"]];
+const boton = document.querySelector("copiar");
 
+function clipboard(){
+    salidaT.select();
+    navigator.clipboard.writeText(salidaT.value);
+    salidaT.value = "";
+    alert("se copio perfectamente");
+}
 function btnEncriptar(){
     const textEncriptado = encriptar(entradaT.value);
     salidaT.value = textEncriptado;
