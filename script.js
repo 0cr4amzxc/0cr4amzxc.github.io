@@ -7,15 +7,29 @@ function clipboard(){
     salidaT.select();
     navigator.clipboard.writeText(salidaT.value);
     salidaT.value = "";
-    alert("se copio perfectamente");
-}
+    entradaT.value="";
+    document.getElementById("btncopiar").style.display = "none"; 
+    document.getElementById("munieco").style.display = "block";
+    document.getElementById("h1titulo").style.display = "block";
+    document.getElementById("parrafo").style.display = "block";
+}   
+    // alert("se copio perfectamente");
+
 function btnEncriptar(){
     const textEncriptado = encriptar(entradaT.value);
-    salidaT.value = textEncriptado;
+    salidaT.value = textEncriptado;        
+    document.getElementById("btncopiar").style.display = "block";
+    document.getElementById("munieco").style.display = "none";
+    document.getElementById("h1titulo").style.display = "none";
+    document.getElementById("parrafo").style.display = "none";
 }
 function btnDescriptar(){
     const textDescriptado = desencriptar(entradaT.value);
     salidaT.value = textDescriptado;
+    document.getElementById("btncopiar").style.display = "block";
+    document.getElementById("munieco").style.display = "none";
+    document.getElementById("h1titulo").style.display = "none";
+    document.getElementById("parrafo").style.display = "none";
 }
 
 function encriptar(textAencriptar){    
